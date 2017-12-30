@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="../JQuery/jquery-3.2.1.js"></script>
+</head>
+<body>
+<div>
+	<label for="mensaje"> Mensaje </label>
+	<input type="text" id="mensaje"/>
+	<button id="send-mensaje" class="btn" onclick="enviarMensaje()"> mandar mensaje </button>
+</div>
+<ul id="listaMensajes"></ul>
+<script type="text/javascript">
+//Crea el worker
+var worker = new Worker("Ejercicio3.js");
+
+//Recibe mensajes del worker
+worker.onmessage = function(e){
+	var mensaje=e.data;
+	$('#listaMensajes').append('<li>' + mensaje + '</li>');
+}
+
+function enviarMensaje(){
+	var mensaje=$('#mensaje').val();
+	var mesajeobject={propiedad:mensaje};
+	//send message
+	worker.postMessage(mesajeobject);
+}
+worker.postMessage({status:"START"});
+</script>
+</body>
+</html>
