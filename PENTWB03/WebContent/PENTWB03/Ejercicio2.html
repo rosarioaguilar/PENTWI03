@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script src="../JQuery/jquery-3.2.1.js"></script>
+<script src="Ejercicio2.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+console.log(algebra);
+algebra.textbook();
+console.log(algebraDot);
+algebraDot.textbook();
+//esta no funciona
+console.log(algebraDot["idk"]);
+var orange = new Fruit("orange","arand");
+
+orange.type();
+console.log(orange);
+carrot.print();
+console.log(carrot.color);
+
+var person = new Person('prueba');
+person.sayHello();
+var student1 = new Student("Rosario " , "JavaScript");
+student1.sayHello();
+console.log(student1 instanceof Student);
+console.log(student1 instanceof Person);
+
+
+console.log("----------------------------------");
+console.log("small" in seafood);
+console.log(seafood.hasOwnProperty("toString"));
+console.log(seafood.hasOwnProperty("big"));
+for (var item in seafood){
+	console.log(item);
+}
+	
+
+
+</script>
+</body>
+</html>

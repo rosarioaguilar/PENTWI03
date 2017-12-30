@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<script type="text/javascript"></script>
+<script src="../JQuery/jquery-3.2.1.js"></script>
+<script src="Ejercicio1.js"></script>
+</head>
+<body>
+
+ <h2 id="funcionesAnidadas"></h2>
+ <h3 id="otraFuncionAnidada"></h3>
+ 	
+<span id ='factorial'></span>
+
+<button id="funcanonim" onclick='temp()'> click </button>
+
+<button id="error" onclick='error()'> click </button>
+
+<!-- <p id='funcionesanomimas'></p> -->
+
+<script type="text/javascript">
+$('#funcionesAnidadas').html(funcionExterna('parametro 1 externo','parametro 2 externo'));
+console.log(miResultadoCelebrity);
+$('#otraFuncionAnidada').html(miResultadoCelebrity + '<br>' + miResultadoCelebrity('parametro de la funcion interna'));
+
+var myPlace=theLocation();
+myPlace.get();
+myPlace.set("Mexico");
+myPlace.get();
+
+$('#factorial').html(factorial(10));
+
+function temp(){
+	pony.sayHello();
+}
+</script>
+</body>
+</html>
